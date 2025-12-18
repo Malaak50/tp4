@@ -8,9 +8,8 @@ import { useTodoStore } from "../store/useTodoStore";
 const { todos, addTodo } = useTodoStore(); 
 */
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
-import { useEffect } from "react";
+
 import { useTodoStore } from "../store/useTodoStore"; 
-import AppBar from "../components/AppBar";
 //const { todos, addTodo } = useTodoStore(); 
 export default function TodoListScreen({ navigation }) {
   //const todos = useSelector(state => state.todos);

@@ -1,11 +1,12 @@
 import { View, Text, Button } from "react-native";
-import { useTodoStore } from "../store/useTodoStore"; 
+import { useTodoStore } from "../store/useTodoStore"; // ✅ import du store Zustand
 
 export default function TodoDetailsScreen({ route, navigation }) {
   const { id, title } = route.params;
 
   const removeTodo = useTodoStore((state) => state.removeTodo);
 
+  // ✅ Étape 2 : implémenter le bouton "Supprimer"
   const handleDelete = () => {
     removeTodo(id);        // supprime la tâche dans le store Zustand
     navigation.goBack();   // ✅ Étape 3 : revenir à l’écran précédent

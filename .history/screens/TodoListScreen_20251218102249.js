@@ -1,27 +1,22 @@
 // screens/TodoListScreen.js
-/*import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { addTodo } from "../store/todosSlice";
 import AppBar from "../components/AppBar";
 import { useTodoStore } from "../store/useTodoStore"; 
 const { todos, addTodo } = useTodoStore(); 
-*/
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
-import { useEffect } from "react";
-import { useTodoStore } from "../store/useTodoStore"; 
-import AppBar from "../components/AppBar";
-//const { todos, addTodo } = useTodoStore(); 
+/*
 export default function TodoListScreen({ navigation }) {
-  //const todos = useSelector(state => state.todos);
-  const { todos, addTodo } = useTodoStore(); 
-  //const dispatch = useDispatch();
+  const todos = useSelector(state => state.todos);
+  const dispatch = useDispatch();
 
-  useEffect(() => { 
-addTodo({ id: 1, title: "Faire les courses" }); 
-addTodo({ id: 2, title: "Sortir le chien" }); 
-addTodo({ id: 3, title: "Coder une app RN" }); 
-}, []); 
+  useEffect(() => {
+    dispatch(addTodo({ id: 1, title: "Faire les courses" }));
+    dispatch(addTodo({ id: 2, title: "Sortir le chien" }));
+    dispatch(addTodo({ id: 3, title: "Coder une app RN" }));
+  }, []);
+
   return (
     <View style={{ flex: 1, padding: 20 }}>
       <AppBar title="Mes tâches" />
@@ -40,8 +35,8 @@ addTodo({ id: 3, title: "Coder une app RN" });
       />
     </View>
   );
-
 }
+
 
 
 /*import { useState, useEffect } from "react";

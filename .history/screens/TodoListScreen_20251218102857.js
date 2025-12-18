@@ -7,17 +7,13 @@ import AppBar from "../components/AppBar";
 import { useTodoStore } from "../store/useTodoStore"; 
 const { todos, addTodo } = useTodoStore(); 
 */
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
-import { useEffect } from "react";
 import { useTodoStore } from "../store/useTodoStore"; 
-import AppBar from "../components/AppBar";
-//const { todos, addTodo } = useTodoStore(); 
+const { todos, addTodo } = useTodoStore(); 
 export default function TodoListScreen({ navigation }) {
-  //const todos = useSelector(state => state.todos);
-  const { todos, addTodo } = useTodoStore(); 
-  //const dispatch = useDispatch();
+  const todos = useSelector(state => state.todos);
+  const dispatch = useDispatch();
 
-  useEffect(() => { 
+  ueEffect(() => { 
 addTodo({ id: 1, title: "Faire les courses" }); 
 addTodo({ id: 2, title: "Sortir le chien" }); 
 addTodo({ id: 3, title: "Coder une app RN" }); 
@@ -41,7 +37,7 @@ addTodo({ id: 3, title: "Coder une app RN" });
     </View>
   );
 
-}
+
 
 
 /*import { useState, useEffect } from "react";
