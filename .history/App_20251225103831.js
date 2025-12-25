@@ -45,7 +45,7 @@ import { useEffect, useState, useContext } from "react";
 import { View, StyleSheet, ActivityIndicator } from "react-native";
 import { initDB } from "./services/database";
 import { ThemeProvider, ThemeContext } from "./context/ThemeContext";
-import TodoListOfflineScreen from "./screens/TodoListOfflineScreen";
+import TodoListFetchScreen from "./screens/TodoListFetchScreen";
 
 function MainApp() {
   const { theme } = useContext(ThemeContext);
@@ -57,7 +57,7 @@ function MainApp() {
         theme === "dark" ? styles.dark : styles.light,
       ]}
     >
-      <TodoListOfflineScreen />
+      <TodoListFetchScreen />
     </View>
   );
 }

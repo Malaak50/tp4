@@ -1,4 +1,4 @@
-import { create } from "react-redux"; 
+import { create } from "redux"; 
  
 export const useTodoStore = create((set) => ({ 
  // état global 
